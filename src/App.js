@@ -3,13 +3,12 @@ import React, { Component } from 'react';
 import logo from './logo.svg';
 import './App.css';
 
+reactPolymer.registerEvent('change', 'onChange');
 
 class App extends Component {
   constructor(props) {
     super(props);
     this.state = { value: 1 };
-
-    // reactPolymer.registerEvent('change', 'onChange');
   }
 
   changeValue = () => {
@@ -22,7 +21,7 @@ class App extends Component {
   }
 
   componentDidMount(){
-    document.querySelector('tabs-clab').addEventListener('change', this.changeTab.bind(this));
+    // document.querySelector('tabs-clab').addEventListener('change', this.changeTab.bind(this));
   }
 
   render() {
